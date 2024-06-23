@@ -18,6 +18,20 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="about_screen.h" />
+    <ClInclude Include="game.h" />
+    <ClInclude Include="game_data.h" />
+    <ClInclude Include="menu_screen.h" />
+    <ClInclude Include="screen_manager.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="about_screen.cpp" />
+    <ClCompile Include="game.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="menu_screen.cpp" />
+    <ClCompile Include="screen_manager.cpp" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
