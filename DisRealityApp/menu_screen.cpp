@@ -7,10 +7,10 @@ void MenuScreen::init()
 {
   mBackground.setTexture(dr::Textures::get("menu_screen_background"));
 	
-  dr::Button buttonAbout( { 200, 75 }, dr::TextManager::get("about_button"));
+  dr::TextButton buttonAbout( { 200, 75 }, dr::TextManager::get("about_button"));
 	buttonAbout.setPosition({ 900, 800 });
   mButtons.push_back(buttonAbout);
-  dr::Button buttonExit( { 200, 75 }, dr::TextManager::get("exit_button"));
+  dr::TextButton buttonExit( { 200, 75 }, dr::TextManager::get("exit_button"));
 	buttonExit.setPosition( { 900, 900 } );
   mButtons.push_back(buttonExit);
 }

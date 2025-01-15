@@ -42,6 +42,6 @@ void Game::init()
   dr::TextManager::load("description", aboutText);
 
   aboutText.setCharacterSize(25);
-  aboutText.setString("version 0.1.0");
+  aboutText.setString("version 0.2.0");
   dr::TextManager::load("version", aboutText);
 }

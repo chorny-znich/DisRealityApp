@@ -10,7 +10,7 @@ void AboutScreen::init()
 	version.setPosition(900, 600);
 	mInfo.push_back(version);
 
-  dr::Button buttonBack( { 200, 75 }, dr::TextManager::get("back_button"));
+  dr::TextButton buttonBack( { 200, 75 }, dr::TextManager::get("back_button"));
 	buttonBack.setPosition({ 900, 1000 });
   mButtons.push_back(buttonBack);
 }

@@ -9,7 +9,7 @@ class MenuScreen : public dr::Screen
 private:
 	sf::View mMainView{ {0, 0, GameData::GraphicResolution.x, GameData::GraphicResolution.y} };
 	sf::Sprite mBackground;
-	std::vector<dr::Button> mButtons;
+	std::vector<dr::TextButton> mButtons;
 
 public:
 	void init();
