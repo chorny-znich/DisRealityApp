@@ -1,11 +1,12 @@
 #include "game.h"
 #include "screen_manager.h"
+#include "menu_screen.h"
 #include "game_data.h"
 #include <iostream>
 
 void Game::createStartScreen() 
 {
-  ScreenManager::createScreen(GameData::Screens::MENU);
+  dr::ScreenManager::createScreen<MenuScreen>("MENU");
 }
 
 void Game::init() 

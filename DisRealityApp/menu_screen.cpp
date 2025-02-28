@@ -2,6 +2,7 @@
 #include "screen_manager.h"
 #include <iostream>
 #include <format>
+#include "about_screen.h"
 
 void MenuScreen::init()
 {
@@ -40,7 +41,7 @@ void MenuScreen::inputHandler(sf::Mouse::Button button, bool isPressed, sf::Vect
 	switch (buttonIndex)
 	{
 	case 0:
-		ScreenManager::createScreen(GameData::Screens::ABOUT);
+		dr::ScreenManager::createScreen<AboutScreen>("ABOUT");
 		break;
 	case 1:
 		dr::GameState::destroyScreen();
