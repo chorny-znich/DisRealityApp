@@ -138,9 +138,11 @@
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="game_data.h" />
     <ClInclude Include="game_engine.h" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="data\texture_list.ini" />
     <None Include="docs\docs.md" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

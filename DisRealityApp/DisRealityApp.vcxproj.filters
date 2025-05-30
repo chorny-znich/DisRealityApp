@@ -32,9 +32,15 @@
     <ClInclude Include="game_engine.h">
       <Filter>Файлы заголовков\Engine</Filter>
     </ClInclude>
+    <ClInclude Include="game_data.h">
+      <Filter>Файлы заголовков\Engine</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="docs\docs.md">
+      <Filter>Файлы ресурсов</Filter>
+    </None>
+    <None Include="data\texture_list.ini">
       <Filter>Файлы ресурсов</Filter>
     </None>
   </ItemGroup>

@@ -3,4 +3,6 @@
 
 class GameEngine : public dr::Engine
 {
+private:
+  void init() override;
 };

@@ -11,3 +11,14 @@ class GameEngine : public dr::Engine
 GameEngine gameEngine;
 gameEngine.run();
 ```
+- Override  the virtual dr::init() method from the DisRealityGF.
+
+File's structure
+
+The folder structure for the assets:
+assets - in the root folder
+assets -> img -- images
+assets -> font -- fonts
+assets -> sound -- sounds
+
+data -> texture_list.ini - pairs of texture's id and a path to texture's file
