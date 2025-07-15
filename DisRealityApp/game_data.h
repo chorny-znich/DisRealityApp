@@ -1,5 +1,6 @@
 #pragma once
 #include <string>
+#include <SFML/System.hpp>
 
 namespace GameData
 {
@@ -9,4 +10,5 @@ namespace GameData
   inline namespace path {
     const std::string TextureListFile{ R"(data/texture_list.ini)" };
   }
+  const sf::Vector2f GraphicResolution{ 1920.f, 1080.f };
 }

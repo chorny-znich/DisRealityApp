@@ -1,6 +1,6 @@
-// DisRealityGF application
-// The template for the minimal DisRealityGF application
-// version 1.0
+// DisRealityEngine application
+// The template for the minimal DisReality Engine application
+// version 0.1.0
 
 #include "game_engine.h"
 

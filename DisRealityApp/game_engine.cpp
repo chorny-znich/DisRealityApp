@@ -1,7 +1,13 @@
 #include "game_engine.h"
+#include "about_screen.h"
 #include "game_data.h"
-#include <DisRealityGF.h>
+#include <disreality_engine.h>
 #include <iostream>
+
+void GameEngine::createStartScreen()
+{
+  dr::ScreenManager::createScreen<AboutScreen>("ABOUT");
+}
 
 void GameEngine::init()
 {
