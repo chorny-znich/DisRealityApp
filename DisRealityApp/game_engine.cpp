@@ -1,12 +1,12 @@
 #include "game_engine.h"
-#include "about_screen.h"
+#include "menu_screen.h"
 #include "game_data.h"
 #include <disreality_engine.h>
 #include <iostream>
 
 void GameEngine::createStartScreen()
 {
-  dr::ScreenManager::createScreen<AboutScreen>("ABOUT");
+  dr::ScreenManager::createScreen<MenuScreen>("MENU");
 }
 
 void GameEngine::init()

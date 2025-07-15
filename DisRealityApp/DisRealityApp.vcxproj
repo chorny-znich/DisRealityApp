@@ -137,11 +137,13 @@
     <ClCompile Include="about_screen.cpp" />
     <ClCompile Include="game_engine.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="menu_screen.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="about_screen.h" />
     <ClInclude Include="game_data.h" />
     <ClInclude Include="game_engine.h" />
+    <ClInclude Include="menu_screen.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="data\texture_list.ini" />
