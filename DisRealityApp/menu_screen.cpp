@@ -7,11 +7,14 @@
 void MenuScreen::init()
 {
   mBackground.setTexture(dr::Textures::get("menu_screen_background"));
-	/*
-  dr::TextButton buttonAbout( { 200, 75 }, dr::TextManager::get("about_button"));
-	buttonAbout.setPosition({ 900, 800 });
-  mButtons.push_back(buttonAbout);
-  dr::TextButton buttonExit( { 200, 75 }, dr::TextManager::get("exit_button"));
+	mMainMenu.setPosition({ 750.f, 350.f });
+	mMainMenu.setColor(sf::Color(255, 255, 224));
+	
+	std::shared_ptr<dr::TextButton> buttonAbout = 
+		std::make_shared<dr::TextButton>({ 200, 75 }, sf::Text()/*dr::TextManager::get("about_button")*/);
+	buttonAbout->setFillColor(sf::Color(255, 165, 0));
+  mMainMenu.addButton(buttonAbout);
+  /*dr::TextButton buttonExit({200, 75}, dr::TextManager::get("exit_button"));
 	buttonExit.setPosition( { 900, 900 } );
   mButtons.push_back(buttonExit);*/
 }
@@ -53,6 +56,7 @@ void MenuScreen::render(sf::RenderWindow& window)
 {
 	window.setView(mMainView);
   window.draw(mBackground);
+	mMainMenu.render(window);
 	/*for (auto& btn : mButtons) {
     btn.render(window);
   }*/
