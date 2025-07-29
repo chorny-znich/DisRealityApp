@@ -10,10 +10,12 @@ void MenuScreen::init()
 	mMainMenu.setPosition({ 750.f, 350.f });
 	mMainMenu.setColor(sf::Color(255, 255, 224));
 	
+	mMainMenu.addImageButton({ 300.f, 120.f }, "button_about");
+	/*
 	std::shared_ptr<dr::TextButton> buttonAbout = 
-		std::make_shared<dr::TextButton>({ 200, 75 }, sf::Text()/*dr::TextManager::get("about_button")*/);
+		std::make_shared<dr::TextButton>(sf::Vector2f{ 200, 75 }, sf::Text()/*dr::TextManager::get("about_button")*//*);
 	buttonAbout->setFillColor(sf::Color(255, 165, 0));
-  mMainMenu.addButton(buttonAbout);
+  mMainMenu.addButton(buttonAbout);*/
   /*dr::TextButton buttonExit({200, 75}, dr::TextManager::get("exit_button"));
 	buttonExit.setPosition( { 900, 900 } );
   mButtons.push_back(buttonExit);*/

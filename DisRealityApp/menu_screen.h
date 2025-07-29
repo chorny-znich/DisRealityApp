@@ -9,7 +9,7 @@ class MenuScreen : public dr::Screen
 private:
 	sf::View mMainView{ {0, 0, GameData::GraphicResolution.x, GameData::GraphicResolution.y} };
 	sf::Sprite mBackground;
-	dr::Panel mMainMenu{ {400.f, 350.f} };
+	dr::Panel mMainMenu{ {600.f, 400.f} };
 
 public:
 	void init();
