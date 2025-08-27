@@ -13,11 +13,8 @@ void AboutScreen::init()
 	mInfo.push_back(version);
 	
 	mMainMenu.setPosition({ 850.f, 900.f });
-	mMainMenu.setColor(sf::Color(255, 255, 224, 255));
+	mMainMenu.setColor(sf::Color(255, 255, 255, 0));
 	mMainMenu.addImageButton({ 300.f, 120.f }, "button_back");
-  /*dr::TextButton buttonBack({200, 75}, dr::TextManager::get("back_button"));
-	buttonBack.setPosition({ 900, 1000 });
-  mButtons.push_back(buttonBack);*/
 }
 
 void AboutScreen::inputHandler(sf::Keyboard::Key key, bool isPressed)

@@ -160,6 +160,7 @@
     <ClInclude Include="menu_screen.h" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="config\engine_config.ini" />
     <None Include="data\texture_list.ini" />
     <None Include="docs\docs.md" />
   </ItemGroup>

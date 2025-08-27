@@ -8,7 +8,7 @@ void MenuScreen::init()
 {
   mBackground.setTexture(dr::Textures::get("menu_screen_background"));
 	mMainMenu.setPosition({ 750.f, 400.f });
-	mMainMenu.setColor(sf::Color(255, 255, 224, 255));
+	mMainMenu.setColor(sf::Color(255, 255, 255, 0));
 	
 	mMainMenu.addImageButton({ 300.f, 120.f }, "button_about");
 	mMainMenu.addImageButton({ 300.f, 120.f }, "button_exit");
