@@ -3,7 +3,7 @@
 
 class GameEngine : public dr::Engine
 {
-public:
-	virtual void init();
+private:
+	virtual void init() override;
+	virtual void createStartScreen() override;
 };
-
