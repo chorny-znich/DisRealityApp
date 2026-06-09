@@ -7,8 +7,8 @@
 class AboutScreen : public dr::Screen
 {
 public:
-	void init();
-	void handleInput();
-	void update(float dt);
-	void render(sf::RenderWindow& window);
+	void init() override;
+	void handleInput(const sf::Event& event);
+	void update(float dt) override;
+	void render(sf::RenderWindow& window) override;
 };

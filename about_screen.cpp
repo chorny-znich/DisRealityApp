@@ -3,7 +3,7 @@
 void AboutScreen::init()
 {}
 
-void AboutScreen::handleInput()
+void AboutScreen::handleInput(const sf::Event& event)
 {
 }
 
