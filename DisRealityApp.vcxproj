@@ -136,10 +136,12 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="about_screen.h" />
+    <ClInclude Include="game_data.h" />
     <ClInclude Include="game_engine.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="config\engine_config.ini" />
+    <None Include="data\text_style.ini" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

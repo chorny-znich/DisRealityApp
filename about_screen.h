@@ -1,4 +1,5 @@
 #pragma once
+#include "game_data.h"
 #include <disreality_engine.h>
 
 /**
@@ -11,4 +12,6 @@ public:
 	void handleInput(const sf::Event& event);
 	void update(float dt) override;
 	void render(sf::RenderWindow& window) override;
+private:
+	sf::View mMainView{ {0, 0}, {gd::GraphicsResolution.x, gd::GraphicsResolution.y} };
 };

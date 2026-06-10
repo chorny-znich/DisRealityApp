@@ -44,9 +44,15 @@
     <ClInclude Include="about_screen.h">
       <Filter>Файлы заголовков\Screen</Filter>
     </ClInclude>
+    <ClInclude Include="game_data.h">
+      <Filter>Файлы заголовков\Engine</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="config\engine_config.ini">
+      <Filter>Файлы ресурсов</Filter>
+    </None>
+    <None Include="data\text_style.ini">
       <Filter>Файлы ресурсов</Filter>
     </None>
   </ItemGroup>
