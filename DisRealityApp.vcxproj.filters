@@ -45,4 +45,9 @@
       <Filter>Файлы заголовков\Screen</Filter>
     </ClInclude>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="config\engine_config.ini">
+      <Filter>Файлы ресурсов</Filter>
+    </None>
+  </ItemGroup>
 </Project>
