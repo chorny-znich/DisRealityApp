@@ -4,6 +4,7 @@
 
 void GameEngine::init()
 {
+  dr::Engine::init();
 }
 
 /**
