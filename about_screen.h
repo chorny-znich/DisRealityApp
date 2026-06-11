@@ -13,5 +13,6 @@ public:
 	void update(float dt) override;
 	void render(sf::RenderWindow& window) override;
 private:
-	sf::View mMainView{ {0, 0}, {gd::GraphicsResolution.x, gd::GraphicsResolution.y} };
+	sf::View mMainView{ sf::FloatRect({0, 0}, {gd::GraphicsResolution.x, gd::GraphicsResolution.y}) };
+	std::vector<sf::Text> mInfo;
 };
