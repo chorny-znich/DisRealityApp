@@ -141,6 +141,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="config\engine_config.ini" />
+    <None Include="data\strings.ini" />
     <None Include="data\text_style.ini" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

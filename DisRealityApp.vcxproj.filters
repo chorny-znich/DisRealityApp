@@ -55,5 +55,8 @@
     <None Include="data\text_style.ini">
       <Filter>Файлы ресурсов</Filter>
     </None>
+    <None Include="data\strings.ini">
+      <Filter>Файлы ресурсов</Filter>
+    </None>
   </ItemGroup>
 </Project>

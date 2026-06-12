@@ -7,13 +7,15 @@ void AboutScreen::init()
 {
 	sf::Text description = dr::TextManager::get("main_description");
 	description.setPosition({ 200.f, 500.f });
-	description.setString("Description");
+	description.setString(dr::StringManager::get("about_app_content"));
 	mInfo.push_back(description);
 
 	sf::Text version = dr::TextManager::get("main_version");
 	version.setPosition({ 900.f, 600.f });
-	version.setString("Version");
+	version.setString(dr::StringManager::get("about_app_version"));
 	mInfo.push_back(version);
+
+	
 }
 
 void AboutScreen::handleInput(const sf::Event& event)
