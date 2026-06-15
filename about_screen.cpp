@@ -10,7 +10,6 @@ struct ScreenInputVisitor
 
 	void operator()(const sf::Event::MouseMoved& mouseMoved)
 	{
-		std::cout << "Mouse moved\n";
 		sf::Vector2f mouseViewCoords = window.mapPixelToCoords(mouseMoved.position);
 		screen.mBackButton.isOverlap(mouseViewCoords);
 	}
@@ -33,6 +32,7 @@ void AboutScreen::init()
 	version.setString(dr::StringManager::get("about_app_version"));
 	mInfo.push_back(version);
 
+	mBackButton.setString(dr::StringManager::get("back_button"));
 	mBackButton.setPosition({ 865.f, 1000.f });
 }
 
