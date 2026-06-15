@@ -1,6 +1,24 @@
 #include "about_screen.h"
 
 /**
+ * @brief For handling Events in handleInput method
+ */
+struct ScreenInputVisitor
+{
+	AboutScreen& screen;
+	sf::RenderWindow& window;
+
+	void operator()(const sf::Event::MouseMoved& mouseMoved)
+	{
+		std::cout << "Mouse moved\n";
+		sf::Vector2f mouseViewCoords = window.mapPixelToCoords(mouseMoved.position);
+		screen.mBackButton.isOverlap(mouseViewCoords);
+	}
+
+	void operator()(const auto&) {};
+};
+
+/**
  * @brief Initialize screen resources
  */
 void AboutScreen::init()
@@ -15,11 +33,12 @@ void AboutScreen::init()
 	version.setString(dr::StringManager::get("about_app_version"));
 	mInfo.push_back(version);
 
-	
+	mBackButton.setPosition({ 865.f, 1000.f });
 }
 
-void AboutScreen::handleInput(const sf::Event& event)
+void AboutScreen::handleInput(const sf::Event& event, sf::RenderWindow& window)
 {
+	event.visit(ScreenInputVisitor{ *this, window });
 }
 
 void AboutScreen::update(float dt)
@@ -28,10 +47,11 @@ void AboutScreen::update(float dt)
 
 void AboutScreen::render(sf::RenderWindow& window)
 {
-	//window.setView(mMainView);
+	window.setView(mMainView);
 
 	for (const auto& txt : mInfo) 
 	{
 		window.draw(txt);
 	}
+	mBackButton.render(window);
 }
