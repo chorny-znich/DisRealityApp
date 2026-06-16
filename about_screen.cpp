@@ -3,7 +3,7 @@
 /**
  * @brief For handling Events in handleInput method
  */
-struct ScreenInputVisitor
+struct AboutScreen::ScreenInputVisitor
 {
 	AboutScreen& screen;
 	sf::RenderWindow& window;
@@ -12,6 +12,22 @@ struct ScreenInputVisitor
 	{
 		sf::Vector2f mouseViewCoords = window.mapPixelToCoords(mouseMoved.position);
 		screen.mBackButton.isOverlap(mouseViewCoords);
+	}
+
+	/**
+	 * @brief Mouse button clicked event
+	 * @param
+	 */
+	void operator()(const sf::Event::MouseButtonPressed mouseButton)
+	{
+		if (mouseButton.button == sf::Mouse::Button::Left)
+		{
+			sf::Vector2f mouseViewCoords = window.mapPixelToCoords(mouseButton.position);
+			if (screen.mBackButton.isClicked(mouseViewCoords))
+			{
+				dr::ScreenManager::destroyScreen();
+			}
+		}
 	}
 
 	void operator()(const auto&) {};

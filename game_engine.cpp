@@ -1,5 +1,5 @@
 #include "game_engine.h"
-#include "about_screen.h"
+#include "main_menu_screen.h"
 #include <disreality_engine.h>
 
 void GameEngine::init()
@@ -12,5 +12,5 @@ void GameEngine::init()
  */
 void GameEngine::createStartScreen()
 {
-  dr::ScreenManager::addScreen<AboutScreen>("about_screen");
+  dr::ScreenManager::addScreen<MainMenuScreen>("main_menu_screen");
 }
