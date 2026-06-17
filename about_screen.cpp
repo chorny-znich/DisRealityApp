@@ -8,10 +8,23 @@ struct AboutScreen::ScreenInputVisitor
 	AboutScreen& screen;
 	sf::RenderWindow& window;
 
+	void clearUI()
+	{
+		window.setMouseCursor(dr::CursorManager::get("arrow"));
+		screen.mBackButton.clearOverlap();
+	}
+
 	void operator()(const sf::Event::MouseMoved& mouseMoved)
 	{
 		sf::Vector2f mouseViewCoords = window.mapPixelToCoords(mouseMoved.position);
-		screen.mBackButton.isOverlap(mouseViewCoords);
+		if (screen.mBackButton.isOverlap(mouseViewCoords))
+		{
+			window.setMouseCursor(dr::CursorManager::get("hand"));
+		}
+		else
+		{
+			window.setMouseCursor(dr::CursorManager::get("arrow"));
+		}
 	}
 
 	/**
@@ -25,7 +38,9 @@ struct AboutScreen::ScreenInputVisitor
 			sf::Vector2f mouseViewCoords = window.mapPixelToCoords(mouseButton.position);
 			if (screen.mBackButton.isClicked(mouseViewCoords))
 			{
+				clearUI();
 				dr::ScreenManager::destroyScreen();
+				window.setMouseCursor(dr::CursorManager::get("arrow"));
 			}
 		}
 	}
@@ -64,6 +79,7 @@ void AboutScreen::update(float dt)
 void AboutScreen::render(sf::RenderWindow& window)
 {
 	window.setView(mMainView);
+	window.draw(mBackground);
 
 	for (const auto& txt : mInfo) 
 	{

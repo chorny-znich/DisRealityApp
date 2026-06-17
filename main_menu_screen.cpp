@@ -10,12 +10,35 @@ struct MainMenuScreen::ScreenInputVisitor
 	MainMenuScreen& screen;
 	sf::RenderWindow& window;
 
+	void clearUI()
+	{
+		window.setMouseCursor(dr::CursorManager::get("arrow"));
+		for (auto& button : screen.mMenuButtons)
+		{
+			button.clearOverlap();
+		}
+	}
+
 	void operator()(const sf::Event::MouseMoved& mouseMoved)
 	{
 		sf::Vector2f mouseViewCoords = window.mapPixelToCoords(mouseMoved.position);
+		bool overlap = false;
 		for (auto& button : screen.mMenuButtons)
 		{
-			button.isOverlap(mouseViewCoords);
+			if (button.isOverlap(mouseViewCoords))
+			{
+				overlap = true;
+			}
+		}
+
+		// change the cursor
+		if (overlap)
+		{
+			window.setMouseCursor(dr::CursorManager::get("hand"));
+		}
+		else
+		{
+			window.setMouseCursor(dr::CursorManager::get("arrow"));
 		}
 	}
 
@@ -30,10 +53,12 @@ struct MainMenuScreen::ScreenInputVisitor
 			sf::Vector2f mouseViewCoords = window.mapPixelToCoords(mouseButton.position);
 			if (screen.mMenuButtons[0].isClicked(mouseViewCoords))
 			{
+				clearUI();
 				dr::ScreenManager::addScreen<AboutScreen>("about_screen");
 			}
 			if (screen.mMenuButtons[1].isClicked(mouseViewCoords))
 			{
+				clearUI();
 				dr::ScreenManager::destroyScreen();
 			}
 		}
@@ -64,6 +89,7 @@ void MainMenuScreen::update(float dt)
 void MainMenuScreen::render(sf::RenderWindow& window)
 {
 	window.setView(mMainView);
+	window.draw(mBackground);
 
 	for (auto& button : mMenuButtons)
 	{
